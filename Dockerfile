@@ -7,6 +7,9 @@ WORKDIR /app
 # Copia los archivos del proyecto al contenedor
 COPY . .
 
+# Otorga permisos de ejecución al script gradlew
+RUN chmod +x ./gradlew
+
 # Descarga las dependencias y compila el proyecto
 RUN ./gradlew clean build -x test
 
