@@ -11,4 +11,4 @@ COPY . .
 RUN ./gradlew clean build -x test
 
 # Cambia "<nombre-del-jar>" por el nombre real del archivo JAR generado
-CMD ["java", "-jar", "build/libs/<nombre-del-jar>.jar"]
+CMD ["java", "-jar", "build/libs/bot-kotlin-1.0-SNAPSHOT.jar"]
