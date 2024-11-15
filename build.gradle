@@ -28,3 +28,15 @@ test {
 kotlin {
     jvmToolchain(11)
 }
+
+tasks.withType(Jar) {
+    manifest {
+        attributes(
+                'Main-Class': 'org.example.MainKt' // Cambia 'org.example.MainKt' si tu clase principal tiene otro nombre
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
