@@ -32,7 +32,7 @@ kotlin {
 tasks.withType(Jar) {
     manifest {
         attributes(
-                'Main-Class': 'org.example' // Cambia 'org.example.MainKt' si tu clase principal tiene otro nombre
+                'Main-Class': 'org.example.MainKt' // Cambia 'org.example.MainKt' si tu clase principal tiene otro nombre
         )
     }
     from {
